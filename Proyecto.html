@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>proyecto</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="Proyecto_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Proyecto_files/libs/quarto-html/quarto.js"></script>
+<script src="Proyecto_files/libs/quarto-html/popper.min.js"></script>
+<script src="Proyecto_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Proyecto_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Proyecto_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Proyecto_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Proyecto_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Proyecto_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Proyecto_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Importar la data de los establecimientos </span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ALTA_VERAPAZ <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/ALTA_VERAPAZ.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>BAJA_VERAPAZ <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/BAJA_VERAPAZ.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>CHIMALTENANGO <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/CHIMALTENANGO.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>CHIQUIMULA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/CHIQUIMULA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>EL_PROGRESO <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/EL_PROGRESO.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>ESCUINTLA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/ESCUINTLA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>GUATEMALA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/GUATEMALA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>CIUDAD_CAPITAL <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/CIUDAD_CAPITAL.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>HUEHUETENANGO <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/HUEHUETENANGO.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>IZABAL <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/IZABAL.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>JALAPA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/JALAPA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>JUTIAPA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/JUTIAPA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>PETEN <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/PETEN.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>QUETZALTENANGO <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/QUETZALTENANGO.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>QUICHE <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/QUICHE.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>RETALHULEU <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/RETALHULEU.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>SACATEPEQUEZ <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/SACATEPEQUEZ.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>SAN_MARCOS <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/SAN_MARCOS.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>SANTA_ROSA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/SANTA_ROSA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>SOLOLA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/SOLOLA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>SUCHITEPEQUEZ <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/SUCHITEPEQUEZ.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>TOTONICAPAN <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/TOTONICAPAN.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>ZACAPA <span class="op">=</span> pd.read_csv(<span class="st">'establecimientos/ZACAPA.csv'</span>, delimiter<span class="op">=</span><span class="st">','</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>dataframes <span class="op">=</span> [ALTA_VERAPAZ, BAJA_VERAPAZ, CHIMALTENANGO, CHIQUIMULA, EL_PROGRESO, ESCUINTLA, GUATEMALA,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>              CIUDAD_CAPITAL, HUEHUETENANGO, IZABAL, JALAPA, JUTIAPA, PETEN, QUETZALTENANGO, QUICHE,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>              RETALHULEU, SACATEPEQUEZ, SAN_MARCOS, SANTA_ROSA, SOLOLA, SUCHITEPEQUEZ, TOTONICAPAN, ZACAPA]</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Concatenar todos los DataFrames en uno solo</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.concat(dataframes, ignore_index<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.columns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Index(['CODIGO', 'DISTRITO', 'DEPARTAMENTO', 'MUNICIPIO', 'ESTABLECIMIENTO',
+       'DIRECCION', 'TELEFONO', 'SUPERVISOR', 'DIRECTOR', 'NIVEL', 'SECTOR',
+       'AREA', 'STATUS', 'MODALIDAD', 'JORNADA', 'PLAN', 'DEPARTAMENTAL'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<p>Ver si hay establecimientos con valores nulos o strings vacíos</p>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">"ESTABLECIMIENTO"</span>].isna().<span class="bu">sum</span>())</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df[<span class="st">"ESTABLECIMIENTO"</span>].<span class="bu">str</span>.isspace().<span class="bu">sum</span>())</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.isna().<span class="bu">sum</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+0
+CODIGO                0
+DISTRITO            209
+DEPARTAMENTO          0
+MUNICIPIO             0
+ESTABLECIMIENTO       0
+DIRECCION            51
+TELEFONO            547
+SUPERVISOR          210
+DIRECTOR           1356
+NIVEL                 0
+SECTOR                0
+AREA                  0
+STATUS                0
+MODALIDAD             0
+JORNADA               0
+PLAN                  0
+DEPARTAMENTAL         0
+dtype: int64</code></pre>
+</div>
+</div>
+<p>Sustituir las multiples comillas por una sola comilla y eliminarlas del inicio y final de la cadena</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'ESTABLECIMIENTO'</span>] <span class="op">=</span> df[<span class="st">'ESTABLECIMIENTO'</span>].<span class="bu">str</span>.replace(<span class="st">'"'</span>, <span class="st">''</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Sustituir los valores ‘—-’ por NaN.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df.replace(to_replace<span class="op">=</span><span class="vs">r'^-+|\s+$'</span>, value<span class="op">=</span>np.nan, regex<span class="op">=</span><span class="va">True</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.isnull().<span class="bu">sum</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CODIGO                0
+DISTRITO            209
+DEPARTAMENTO          0
+MUNICIPIO             0
+ESTABLECIMIENTO      16
+DIRECCION            55
+TELEFONO            547
+SUPERVISOR          212
+DIRECTOR           1767
+NIVEL                 0
+SECTOR                0
+AREA                  0
+STATUS                0
+MODALIDAD             0
+JORNADA               0
+PLAN                  0
+DEPARTAMENTAL         0
+dtype: int64</code></pre>
+</div>
+</div>
+<p>Se realizaron estas modificiaciones con el fin de obtener un dataset más limpio y con menos ruido, para poder realizar un análisis más profundo y preciso. El que se hayan reemplazado los valores que tenian — en lugar de NAN era porque al tener un valor — se analizaba como que si existiera un registro en ese campo cuando realmente no. Y esto para el analisis podria generar conflicto. Además de ello se eliminaron todas las “““” porque habian muchos registros que tenian este valor y no se podia realizar un analisis correcto. Por último en la direccion se determino que lo correcto era dejar los valores con las comillas porque dentro de la delimitacion existian , lo que pudo haber ocacionado un error en el analisis a la hora de ir separando los campos por columnas.</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exportar como csv</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'data.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>CODIGO
+<ul>
+<li>Es un string que identifica a un establecimiento educativo:
+<ul>
+<li>EJ: 16-01-0138-46</li>
+</ul></li>
+</ul></li>
+<li>DISTRITO
+<ul>
+<li>Es un string que identifica a un distrito escolar:
+<ul>
+<li>EJ: 16-031.</li>
+</ul></li>
+</ul></li>
+<li>DEPARTAMENTO
+<ul>
+<li>Es el nombre en mayusculas del departamento al que pertence el establecimiento:
+<ul>
+<li>EJ: “GUATEMALA”</li>
+</ul></li>
+</ul></li>
+<li>MUNICIPIO
+<ul>
+<li>Es el nombre en mayusculas del municipio al que pertence el establecimiento.
+<ul>
+<li>EJ: “GUATEMALA”</li>
+</ul></li>
+</ul></li>
+<li>ESTABLECIMIENTO
+<ul>
+<li>Es el nombre en mayusculas del establecimiento:
+<ul>
+<li>EJ: “INSTITUTO NACIONAL DE EDUCACION DIVERSIFICADA”</li>
+</ul></li>
+</ul></li>
+<li>DIRECCION
+<ul>
+<li>Es un string que contiene la direccion del establecimiento educativo:
+<ul>
+<li>EJ: “KM. 15.5 CARRETERA A EL SALVADOR”</li>
+</ul></li>
+</ul></li>
+<li>TELEFONO
+<ul>
+<li>Es un string que contiene el numero de telefono del establecimiento educativo:
+<ul>
+<li>EJ: “6630-0000”</li>
+</ul></li>
+</ul></li>
+<li>SUPERVISOR
+<ul>
+<li>Es un string que contiene el nombre del supervisor del establecimiento educativo:
+<ul>
+<li>EJ: “MARIO ALBERTO GARCIA GARCIA”</li>
+</ul></li>
+</ul></li>
+<li>DIRECTOR
+<ul>
+<li>Es un string que contiene el nombre del director del establecimiento educativo:
+<ul>
+<li>EJ: “MARIO ALBERTO GARCIA GARCIA”</li>
+</ul></li>
+</ul></li>
+<li>NIVEL
+<ul>
+<li>Es un string que contiene el nivel del establecimiento educativo:
+<ul>
+<li>“DIVERSIFICADO”</li>
+</ul></li>
+</ul></li>
+<li>SECTOR
+<ul>
+<li>Es un string que contiene el sector del establecimiento educativo:
+<ul>
+<li>“PRIVADO”</li>
+<li>“OFICIAL”</li>
+<li>“COPERATIVA”</li>
+<li>“MUNICIPAL”</li>
+</ul></li>
+</ul></li>
+<li>AREA
+<ul>
+<li>Es un string que contiene en que area se encuentra el establecimiento educativo:
+<ul>
+<li>“URBANA”</li>
+<li>“RURAL”</li>
+</ul></li>
+</ul></li>
+<li>STATUS
+<ul>
+<li>Es un string que contiene el status del establecimiento educativo:
+<ul>
+<li>“ABIERTA”</li>
+<li>“CERRADA”</li>
+<li>“SIN ESPECIFICAR”</li>
+</ul></li>
+</ul></li>
+<li>MODALIDAD
+<ul>
+<li>Es un string que determina si la modalidad del establecimiento es en un lenguaje o más:
+<ul>
+<li>“MONOLINGUE”</li>
+<li>“BILINGUE”</li>
+</ul></li>
+</ul></li>
+<li>JORNADA
+<ul>
+<li>Es un string que determina la jornada en la que opera el establecimiento educativo
+<ul>
+<li>“MATUTINA”</li>
+<li>“VESPERTINA”</li>
+<li>“NOCTURNA”</li>
+<li>“INTERMEDIA”</li>
+<li>“DOBLE”</li>
+<li>“SIN JORNADA”</li>
+</ul></li>
+</ul></li>
+<li>PLAN
+<ul>
+<li>Es un string que establece el plan de estudio del establecimiento educativo:
+<ul>
+<li>“DIARIO(REGULAR)”</li>
+<li>“FIN DE SEMANA”</li>
+<li>“SEMIPRESENCIAL (FIN DE SEMANA)”</li>
+<li>“SEMIPRESENCIAL (UN DÍA A LA SEMANA)”</li>
+<li>“A DISTANCIA”</li>
+<li>“SEMIPRESENCIAL”</li>
+<li>“SEMIPRESENCIAL (DOS DÍAS A LA SEMANA)”</li>
+<li>“SABATINO”</li>
+<li>“VIRTUAL A DISTANCIA”</li>
+<li>“DOMINICAL”</li>
+<li>“MIXTO”</li>
+<li>“INTERCALADO”</li>
+<li>“IRREGULAR”</li>
+</ul></li>
+</ul></li>
+<li>DEPARTAMENTAL
+<ul>
+<li>Es un string que determina a que departamento pertenece el establecimiento educativo:
+<ul>
+<li>GUATEMALA NORTE<br>
+</li>
+<li>GUATEMALA SUR<br>
+</li>
+<li>GUATEMALA OCCIDENTE<br>
+</li>
+<li>ESCUINTLA<br>
+</li>
+<li>SAN MARCOS<br>
+</li>
+<li>HUEHUETENANGO<br>
+</li>
+<li>QUETZALTENANGO<br>
+</li>
+<li>PETÉN<br>
+</li>
+<li>SUCHITEPÉQUEZ<br>
+</li>
+<li>GUATEMALA ORIENTE<br>
+</li>
+<li>IZABAL<br>
+</li>
+<li>CHIMALTENANGO<br>
+</li>
+<li>ALTA VERAPAZ<br>
+</li>
+<li>JUTIAPA<br>
+</li>
+<li>RETALHULEU<br>
+</li>
+<li>SACATEPÉQUEZ<br>
+</li>
+<li>QUICHÉ<br>
+</li>
+<li>CHIQUIMULA<br>
+</li>
+<li>SANTA ROSA<br>
+</li>
+<li>JALAPA<br>
+</li>
+<li>SOLOLÁ<br>
+</li>
+<li>EL PROGRESO<br>
+</li>
+<li>BAJA VERAPAZ<br>
+</li>
+<li>ZACAPA<br>
+</li>
+<li>TOTONICAPÁN<br>
+</li>
+<li>QUICHÉ NORTE</li>
+</ul></li>
+</ul></li>
+</ul>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
